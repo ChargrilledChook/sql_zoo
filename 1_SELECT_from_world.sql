@@ -60,13 +60,13 @@ FROM
 WHERE
   area > 3000000 XOR population > 250000000;
 
-  -- 9. Rounding
-  SELECT
-    name, ROUND(population / 1000000, 2), ROUND(GDP / 1000000000, 2)
-  FROM
-    world
-  WHERE
-    continent = 'South America';
+-- 9. Rounding
+SELECT
+  name, ROUND(population / 1000000, 2), ROUND(GDP / 1000000000, 2)
+FROM
+  world
+WHERE
+  continent = 'South America';
 
   -- 10. Trillion dollar economies
 SELECT
@@ -84,4 +84,7 @@ FROM
 WHERE
   LENGTH(name) = LENGTH(capital);
 
+-- 12. Matching name and capital
 
+
+-- 13. All the vowels
