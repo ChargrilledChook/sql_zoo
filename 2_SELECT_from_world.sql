@@ -102,4 +102,3 @@ WHERE
   AND name LIKE '%i%'
   AND name LIKE '%o%'
   AND name LIKE '%U%';
-
