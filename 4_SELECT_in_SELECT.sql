@@ -20,6 +20,7 @@ WHERE
     world
   WHERE
     name = 'United Kingdom');
+
 -- 3. List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
 SELECT
  name, continent
@@ -38,9 +39,9 @@ FROM
 WHERE
  population
 BETWEEN
-  (SELECT name FROM world WHERE name = 'Poland')
+  (SELECT population FROM world WHERE name = 'Poland')
 AND
-  (SELECT name FROM world WHERE name = 'Canada');
+  (SELECT population FROM world WHERE name = 'Canada');
 
 -- 5. Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.
 
