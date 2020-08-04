@@ -37,3 +37,21 @@ FROM
   nobel
 WHERE
 yr BETWEEN 1980 AND 1989 AND subject = 'literature';
+
+-- 6. Show all details of the presidential winners:
+
+-- 7. Show the winners with first name John
+
+-- 8. Show the year, subject, and name of Physics winners for 1980 together with the Chemistry winners for 1984.
+
+-- 9. Show the year, subject, and name of winners for 1980 excluding Chemistry and Medicine
+
+-- 10. Show year, subject, and name of people who won a 'Medicine' prize in an early year
+
+-- 11. Find all details of the prize won by PETER GRÜNBERG
+
+-- 12. Find all details of the prize won by EUGENE O'NEILL
+
+-- 13. List the winners, year and subject where the winner starts with Sir. Show the the most recent first, then by name order.
+
+-- 14. Show the 1984 winners and subject ordered by subject and winner name; but list Chemistry and Physics last.
