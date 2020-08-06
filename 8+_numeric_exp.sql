@@ -33,9 +33,28 @@ FROM nss
 WHERE question='Q22'
 AND subject='(8) Computer Science'
 OR subject= '(H) Creative Arts and Design'
-AND question='Q22'
 GROUP BY subject;
 
 -- 6.
--- 7.
--- 8.
+SELECT subject, CEIL(SUM(response*A_STRONGLY_AGREE/100)/SUM(response)*100)
+FROM nss
+WHERE question='Q22'
+AND subject='(8) Computer Science'
+OR subject= '(H) Creative Arts and Design'
+GROUP BY subject;
+
+-- 7. Show the average scores for question 'Q22' for each institution that include 'Manchester' in the name.
+SELECT institution, ROUND(SUM(response*score/100)/SUM(response)*100)
+  FROM nss
+ WHERE question='Q22'
+   AND (institution LIKE '%Manchester%')
+GROUP BY institution
+ORDER BY institution;
+
+-- 8.Show the institution, the total sample size and the number of computing students for institutions in Manchester for 'Q01'.
+SELECT institution, SUM(sample),
+SUM(CASE WHEN subject='(8) Computer Science' THEN sample ELSE 0 END)
+  FROM nss
+ WHERE question='Q01'
+   AND (institution LIKE '%Manchester%')
+GROUP BY institution;
