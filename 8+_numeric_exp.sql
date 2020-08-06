@@ -35,6 +35,7 @@ AND subject='(8) Computer Science'
 OR subject= '(H) Creative Arts and Design'
 AND question='Q22'
 GROUP BY subject;
+
 -- 6.
 -- 7.
 -- 8.
