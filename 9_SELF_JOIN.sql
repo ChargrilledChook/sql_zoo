@@ -45,9 +45,17 @@ WHERE stopa.name='Haymarket'
 AND stopb.name='Leith';
 
 -- 8. Give a list of the services which connect the stops 'Craiglockhart' and 'Tollcross'
+SELECT DISTINCT a.company, a.num
+FROM route a JOIN route b ON
+  (a.company=b.company AND a.num=b.num)
+  JOIN stops stopa ON (a.stop=stopa.id)
+  JOIN stops stopb ON (b.stop=stopb.id)
+WHERE stopa.name='Craiglockhart'
+AND stopb.name='Tollcross';
 
 -- 9. Give a distinct list of the stops which may be reached from 'Craiglockhart' by taking one bus,
 --    including 'Craiglockhart' itself, offered by the LRT company. Include the company and bus no. of the relevant services.
+
 
 -- 10. Find the routes involving two buses that can go from Craiglockhart to Lochend.
 --     Show the bus no. and company for the first bus, the name of the stop for the transfer,
